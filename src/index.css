@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+   background-image: url(./style/img/TheShop.png);
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Libre Baskerville', serif;
+}
+.top{
+    font-family: 'Libre Baskerville', serif;
+   
+}
+header{
+    font-family: 'Libre Baskerville', serif;
+}
+body{
+    font-family: 'Libre Baskerville', serif;
+}
+h1{
+    font-family: 'Libre Baskerville', serif; 
+}
+.nav{
+    font-family: 'Libre Baskerville', serif;
 }

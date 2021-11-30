@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Card, Button, Col, Row, Container, InputGroup, FormControl } from 'react-bootstrap';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
-export default function SignIn() {
+export default function SignIn(props) {
     const [inputs, setInputs] = useState({});
     const handleChange = e => {
         setInputs(prevState => {
@@ -12,6 +13,10 @@ export default function SignIn() {
             }
         })
     }
+   const saveToLocalStorage = (newToken) => {
+        localStorage.setItem('token', newToken);
+    }
+    const navigate = useNavigate()
     const handleSubmit = e => {
         const data = {
             grant_type: 'password',
@@ -32,6 +37,12 @@ export default function SignIn() {
             headers
         }).then(function (response) {
             console.log(response);
+            saveToLocalStorage(response.data.access_token)
+            props.setToken(response.data.access_token)
+            navigate('/home')
+            // save token in localstorage
+            // save token in state on app
+            // redirect to the page you want to visit
         });;
     }
     return (
@@ -43,7 +54,7 @@ export default function SignIn() {
                         <Card>
                             <Card.Header>Sign In To Request Tools or Materials</Card.Header>
                             <Card.Body className='cBody' >
-                                <Card.Title>Use Employee Email to Log In.</Card.Title>
+                                <Card.Title>Enter Employee Email to Log In.</Card.Title>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text id="inputGroup-sizing-default">Email</InputGroup.Text>
                                     <FormControl

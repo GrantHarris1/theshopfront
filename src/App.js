@@ -13,6 +13,7 @@ import Return from './pages/Return';
 import Materials from './pages/Materials';
 import SignIn from './pages/SignIn';
 import axios from 'axios';
+import Brands from './pages/Brands';
 
 function App() {
     const [token, setToken] = useState('')
@@ -38,6 +39,7 @@ function App() {
                     <Route path="tools" element={<Tools tools={tools} />} />
                     <Route path="checkout" element={<Checkout />} />
                     <Route path="return" element={<Return />} />
+                    <Route path="brands" element={<Brands />} />
                     <Route path="materials" element={<Materials />} />
                     <Route path="signIn" element={<SignIn setToken={setToken} />} />
                     <Route index element={<Home />} />

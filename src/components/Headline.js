@@ -15,6 +15,7 @@ export default function Headline(props) {
                             <Nav.Link as={Link} to='/tools' className='text-light'><i class="bi bi-wrench"> </i>Tools</Nav.Link>
                             <Nav.Link as={Link} to='/materials' className='text-light'><i class="bi bi-nut"> </i>Materials</Nav.Link>
                             <Nav.Link as={Link} to='/checkout' className='text-light'><i class="bi bi-bag-plus"> </i>Checkout</Nav.Link>
+                            <Nav.Link as={Link} to='/brands' className='text-light'><i class="bi bi-card-checklist"></i> Brands</Nav.Link>
                             <Nav.Link as={Link} to='/return' className='text-light'><i class="bi bi-arrow-return-left"> </i>Ready for Return</Nav.Link>
                         </Nav>
                         <Nav className="ms-auto">

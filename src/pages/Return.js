@@ -11,7 +11,7 @@ export default function Return() {
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control type="name" placeholder="Enter Name" />
                                 <Form.Text className="text-muted">
-                                    Please enter your fullname.
+                                    Please enter your full name.
                                 </Form.Text>
                             </Form.Group>
 

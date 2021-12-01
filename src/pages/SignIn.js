@@ -54,7 +54,7 @@ export default function SignIn(props) {
                         <Card>
                             <Card.Header>Sign In To Request Tools or Materials</Card.Header>
                             <Card.Body className='cBody' >
-                                <Card.Title>Enter Employee Email to Log In.</Card.Title>
+                                <Card.Title className='text-light'>Enter Employee Email To Log In.</Card.Title>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text id="inputGroup-sizing-default">Email</InputGroup.Text>
                                     <FormControl

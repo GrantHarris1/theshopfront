@@ -1,12 +1,17 @@
 
 body{
    background-image: url(./style/img/TheShop.png);
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+   /* background-position: center; */
+   /* -webkit-background-size: cover; */
+  /* -moz-background-size: cover; */
+  /* -o-background-size: cover; */
   background-size: cover;
   font-family: 'Libre Baskerville', serif;
+
+
+
 }
+
 .top{
     font-family: 'Libre Baskerville', serif;
    

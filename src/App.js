@@ -15,10 +15,11 @@ import SignIn from './pages/SignIn';
 import axios from 'axios';
 import Brands from './pages/Brands';
 
-function App() {
-    const [token, setToken] = useState('')
-    const [tools, setTools] = useState([])
 
+function App() {
+    const [token, setToken] = useState('');
+    const [tools, setTools] = useState([]);
+    const [brands, setBrands] = useState([])
     useEffect(() => {
         // run axios call
         // in then -> set tools
@@ -28,8 +29,17 @@ function App() {
             url: "https://the_shop_backend-grantharriselectric334935.codeanyapp.com/api/v1/tools",
         }).then(res => setTools(res.data))
     }, [])
+    useEffect(() => {
+        // run axios call
+        // in then -> set tools
 
-    console.log(tools)
+        axios({
+            method: 'get',
+            url: "https://the_shop_backend-grantharriselectric334935.codeanyapp.com/api/v1/brands",
+        }).then(res => setBrands(res.data))
+    }, [])
+
+    console.log(brands)
 
     return (
         <Router>
@@ -39,7 +49,7 @@ function App() {
                     <Route path="tools" element={<Tools tools={tools} />} />
                     <Route path="checkout" element={<Checkout />} />
                     <Route path="return" element={<Return />} />
-                    <Route path="brands" element={<Brands />} />
+                    <Route path="brands" element={<Brands brands ={brands} />} />
                     <Route path="materials" element={<Materials />} />
                     <Route path="signIn" element={<SignIn setToken={setToken} />} />
                     <Route index element={<Home />} />

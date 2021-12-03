@@ -21,7 +21,7 @@ export default function SignIn(props) {
         const data = {
             grant_type: 'password',
             client_id: 2,
-            client_secret: 'dnrWrQupuOAweX2339Nwaa2URfDK3CFrzcBbAvVR',
+            client_secret: 'rsoItI3Hi7eISskXoFXKI8buigkEeL8L3qlMv4hL',
             username: inputs.username,
             password: inputs.password,
             scope: ''

@@ -21,22 +21,27 @@ export default function Tools(props) {
             <br />
             <Container className='text-center'>
                 <Row>
-                    <Col>
-                        <Table bordered className=' bg-white'>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Type</th>
-                                    <th>Brand</th>
-                                    <th>Num Checkouts</th>
-                                    <th>Checkout</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {mappedTools}
-                            </tbody>
-                        </Table>
-                    </Col>
+                    <Row className='text-center'>
+                        <Col>
+                            <Col sm={4} md={12}>
+                                <Table responsive className=' bg-white'>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Type</th>
+                                            <th>Brand</th>
+                                            <th>Checkouts</th>
+                                            <th>Checkout</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {mappedTools}
+                                    </tbody>
+                                </Table>
+                            </Col>
+                        </Col>
+                    </Row>
                 </Row>
             </Container>
         </div>

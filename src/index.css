@@ -1,17 +1,21 @@
 
 body{
-   background-image: url(./style/img/TheShop.png);
-   /* background-position: center; */
-   /* -webkit-background-size: cover; */
-  /* -moz-background-size: cover; */
-  /* -o-background-size: cover; */
-  background-size: cover;
+   background-image: url(./style/img/3.png); 
+   
+   background-size: cover;
   font-family: 'Libre Baskerville', serif;
+  
 
 
 
 }
-
+@media (max-width: 667px)  {
+    body {
+        background-image: url('./style/img/4.png');
+       /* background-repeat: no-repeat; */
+        font-family: 'Libre Baskerville', serif;
+    }
+}
 .top{
     font-family: 'Libre Baskerville', serif;
    
@@ -28,12 +32,9 @@ h1{
 .nav{
     font-family: 'Libre Baskerville', serif;
 }
-.cBody{
-    background-color:#2E0B12;
-   
-    
+.home{
+    background-image: url('./style/img/3.png');
 }
-.SI{
-    font-family: 'Libre Baskerville', serif;
-}
+
+ 
  

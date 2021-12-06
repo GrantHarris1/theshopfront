@@ -1,18 +1,21 @@
 import React from 'react';
 import { Container, Col, Row, Table, Button } from 'react-bootstrap';
+const NumCheckouts = Math.floor(Math.random() * 100);
 
 
 export default function Tools(props) {
 
     const mappedTools = props.tools.map((tool, index) => {
         return (
+            
             <tr key={index}>
                 <td>{tool.id}</td>
                 <td>{tool.name}</td>
                 <td>{tool.brand.name}</td>
-                <td>0</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
-                <th> <Button variant="dark">Check this tool out</Button>{' '}</th>
+                <td>{NumCheckouts}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
+                <th> <Button variant="dark" className='rounded-pill'>Check this tool out</Button>{' '}</th>
             </tr>
+            
         )
     })
 
@@ -21,10 +24,10 @@ export default function Tools(props) {
             <br />
             <Container className='text-center'>
                 <Row>
-                    <Row className='text-center'>
+                    <Row >
                         <Col>
                             <Col sm={4} md={12}>
-                                <Table responsive className=' bg-white'>
+                                <Table responsive bordered className=' bg-white border-secondary border-rounded' >
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -45,5 +48,6 @@ export default function Tools(props) {
                 </Row>
             </Container>
         </div>
+        
     )
 }

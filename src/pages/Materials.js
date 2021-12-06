@@ -1,31 +1,53 @@
 import React from 'react';
-import { Table, Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row, Table, Button } from 'react-bootstrap';
+const NumLeft = Math.floor(Math.random() * 100);
 
 
-export default function Material() {
+export default function Materials(props) {
+    const mappedMaterials = props.materials.map((material, index) => {
+        return (
+
+            <tr key={index}>
+                <td>{material.id}</td>
+                <td>{material.name}</td>
+                <td>{material.type}</td>
+                <td>{material.size.name}</td>
+                <td>{NumLeft}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
+                <th> <Button variant="dark" className='rounded-pill'>Add to Checkout</Button>{' '}</th>
+            </tr>
+
+        )
+    })
+
     return (
-        <div>
+        <div className='SI'>
             <br />
-             <Container className='text-center'>
+            <Container className='text-center'>
                 <Row>
-                    <Col>
-                    <Table bordered className=' bg-white'>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Type</th>
-                                    <th>Size</th>
-                                    <th>Num Checkouts</th>
-                                    <th>Checkout</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                            </tbody>
-                        </Table>
-                    </Col>
+                    <Row >
+                        <Col>
+                            <Col sm={4} md={12}>
+                                <Table responsive bordered className=' bg-white border-secondary border-rounded' >
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Size</th>
+                                            <th>Available</th>
+                                            <th>Checkout</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {mappedMaterials}
+                                    </tbody>
+                                </Table>
+                            </Col>
+                        </Col>
+                    </Row>
                 </Row>
             </Container>
         </div>
+
     )
 }

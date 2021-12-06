@@ -1,17 +1,20 @@
 import React from 'react';
 import { Container, Row, Col, Button, Table } from 'react-bootstrap';
 
+const NumTools = Math.floor(Math.random() * 100);
+const NumChecks = Math.floor(Math.random() * 100);
 
 
 export default function Brands(props) {
     const mappedBrands = props.brands.map((brand, index) => {
+        
         return (
             <tr key={index}>
                 <td>{brand.id}</td>
                 <td>{brand.name}</td>
-                <td>{brand.tool}</td>
-                <td>0</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
-                <th> <Button variant="dark">Go to Brand</Button>{' '}</th>
+                <td>{NumTools}</td>
+                <td>{NumChecks}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
+                <th> <Button variant="dark" className='rounded-pill'>Go to Brand</Button>{' '}</th>
             </tr>
         )
     })
@@ -22,7 +25,7 @@ export default function Brands(props) {
             <Container className='text-center'>
                 <Row>
                     <Col>
-                        <Table bordered className=' bg-white'>
+                        <Table responsive bordered className=' bg-white border-secondary'>
                             <thead>
                                 <tr>
                                     <th>#</th>

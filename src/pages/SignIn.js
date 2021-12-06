@@ -21,14 +21,14 @@ export default function SignIn(props) {
         const data = {
             grant_type: 'password',
             client_id: 2,
-            client_secret: 'rsoItI3Hi7eISskXoFXKI8buigkEeL8L3qlMv4hL',
+            client_secret: 'FW8hSH2Vzy5j9xN84zDSDjJVRheNj7N7m7HUkIRb',
             username: inputs.username,
             password: inputs.password,
             scope: ''
         }
         const headers = {
             Accept: 'application/json',
-
+            // Authorization: `Bearer ${token}`
         }
         axios({
             method: 'post',
@@ -77,7 +77,7 @@ export default function SignIn(props) {
                                         type='password'
                                     />
                                 </InputGroup>
-                                <Button variant="light"
+                                <Button variant="secondary"
                                     onClick={handleSubmit}
                                 >Click Here To Sign In</Button>{''}
                             </Card.Body>

@@ -5,10 +5,15 @@ import {  Container } from 'react-bootstrap';
 
 export default function Home() {
     return (
-        <div className='home text-center' id='home' >
+        <div className='welcome text-center' >
             <br />
-            <Container className='home'>
+            <h1 className='welcome'>Welcome to The Shop. Sign in to order.</h1>
+            
+            <br />
+            
            <div >
+           
+               
                
 
 
@@ -16,7 +21,7 @@ export default function Home() {
 
            </div>
             
-            </Container>
+            
 
         </div>
     )

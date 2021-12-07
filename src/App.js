@@ -64,7 +64,7 @@ function App() {
                     <Route path="return" element={<Return />} />
                     <Route path="brands" element={<Brands brands ={brands} />} />
                     <Route path="materials" element={<Materials materials = {materials} />} />
-                    <Route path="signIn" element={<SignIn setToken={setToken} />} />
+                    <Route path="signIn" element={<SignIn setToken={setToken} getToken={token} />} />
                     <Route index element={<Home />} />
                     <Route path="home" element={<Home />}/>
                 </Route>

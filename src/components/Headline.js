@@ -32,7 +32,7 @@ export default function Headline(props) {
                             {
                                props.token.length > 0
                                ?
-                               <Nav.Link  className='text-light'><i class="bi bi-clipboard"></i>Sign Out</Nav.Link>
+                               <Nav.Link as={Link} to='/signIn'  className='text-light'><i class="bi bi-clipboard"></i>Sign Out</Nav.Link>
                                :
                                <Nav.Link as={Link} to='/signIn' className='text-light'><i class="bi bi-clipboard"></i>Sign In</Nav.Link>
                             }

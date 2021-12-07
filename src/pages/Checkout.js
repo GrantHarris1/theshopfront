@@ -1,13 +1,13 @@
 import React from 'react';
-import { Form, Button, Container, Row, Col, Table } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, Table, Card } from 'react-bootstrap';
 export default function Checkout() {
     return (
-        <div>
+        <div className='check'>
             <br />
             <Container>
                 <Row>
                     <Col>
-                        <Table responsive bordered variant ='dark' striped className=' bg-white border-secondary border-rounded'>
+                        <Table responsive className=' bg-white border-secondary border-rounded'>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -35,8 +35,9 @@ export default function Checkout() {
                                 </tr>
                             </tbody>
                         </Table>
+                       
 
-                        <Table responsive bordered striped variant ='dark' className=' bg-white border-secondary border-rounded'>
+                        <Table responsive className=' bg-white border-secondary border-rounded'>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -67,7 +68,10 @@ export default function Checkout() {
                     </Col>
                 </Row>
             </Container>
-            <Container className='text-light'>
+            <hr />
+            <br />
+            <br />
+            <Container className=''>
                 <Row>
                     <Col>
                         <Form>
@@ -97,6 +101,17 @@ export default function Checkout() {
                     </Col>
                 </Row>
             </Container>
+            <Card className="text-center">
+  <Card.Header>Featured</Card.Header>
+  <Card.Body>
+    <Card.Title>Special title treatment</Card.Title>
+    <Card.Text>
+      With supporting text below as a natural lead-in to additional content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+  <Card.Footer className="text-muted">2 days ago</Card.Footer>
+</Card>
         </div>
     )
 }

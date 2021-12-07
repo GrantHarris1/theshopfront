@@ -4,7 +4,8 @@ import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
 export default function SignIn(props) {
-    const [inputs, setInputs] = useState({});
+    const [inputs, setInputs] = useState({}); 
+    var token = props.getToken;
     const handleChange = e => {
         setInputs(prevState => {
             return {
@@ -17,11 +18,11 @@ export default function SignIn(props) {
         localStorage.setItem('token', newToken);
     }
     const navigate = useNavigate()
-    const handleSubmit = e => {
+    const handleLogIn = e => {
         const data = {
             grant_type: 'password',
             client_id: 2,
-            client_secret: 'FW8hSH2Vzy5j9xN84zDSDjJVRheNj7N7m7HUkIRb',
+            client_secret: 'L8lk3vqZGQfY1g2TIY2mV4hsl0sxJBpRltSI4Slu',
             username: inputs.username,
             password: inputs.password,
             scope: ''
@@ -39,14 +40,38 @@ export default function SignIn(props) {
             console.log(response);
             saveToLocalStorage(response.data.access_token)
             props.setToken(response.data.access_token)
+            token = response.data.access_token;
             navigate('/home')
             // save token in localstorage
             // save token in state on app
             // redirect to the page you want to visit
         });;
     }
+    const handleLogOut = e => {
+        const data = {
+            
+        }
+        const headers = {
+            Accept: 'application/json',
+            Authorization: `Bearer ${token}`
+        }
+        axios({
+            method: 'post',
+            url: 'https://the_shop_backend-grantharriselectric334935.codeanyapp.com/api/v1/logout',
+            data,
+            headers
+        }).then(function (response) {
+            console.log(response);
+            saveToLocalStorage("")
+            props.setToken("")
+            navigate('/home')
+            // save token in localstorage
+            // save token in state on app
+            // redirect to the page you want to visit
+        });
+    }
     return (
-        <div className='SI'>
+        <div className='signin'>
             <br />
             <Container className='Con text-center'>
                 <Row md={2} className="justify-content-center align-items-center">
@@ -54,7 +79,7 @@ export default function SignIn(props) {
                         <Card>
                             <Card.Header>Sign In To Request Tools or Materials</Card.Header>
                             <Card.Body className='cBody' >
-                                <Card.Title className='text-light'>Enter Employee Email To Log In.</Card.Title>
+                                <Card.Title className=''>Enter Employee Email To Log In.</Card.Title>
                                 <InputGroup className="mb-3">
                                     <InputGroup.Text id="inputGroup-sizing-default">Email</InputGroup.Text>
                                     <FormControl
@@ -77,15 +102,48 @@ export default function SignIn(props) {
                                         type='password'
                                     />
                                 </InputGroup>
+                                
+                                
+                                
                                 <Button variant="secondary"
-                                    onClick={handleSubmit}
-                                >Click Here To Sign In</Button>{''}
+                                    onClick={handleLogIn}
+                                >Click Here To Sign In</Button>
+                                <br />
+                                <br />
+                                <Button variant="secondary"
+                                    onClick={handleLogOut}
+                                >Click Here To Sign Out</Button>
+                                
                             </Card.Body>
                             <Card.Footer className="text-muted">Thank you.</Card.Footer>
                         </Card>
                     </Col>
                 </Row>
             </Container>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <Card className="text-center">
+  <Card.Header>Featured</Card.Header>
+  <Card.Body>
+    <Card.Title>Special title treatment</Card.Title>
+    <Card.Text>
+      With supporting text below as a natural lead-in to additional content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+  <Card.Footer className="text-muted">2 days ago</Card.Footer>
+</Card>
 
 
         </div>

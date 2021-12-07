@@ -1,7 +1,7 @@
 
 body{
-   background-image: url(./style/img/3.png); 
    
+    background-image: url(./style/img/3.png);
    background-size: cover;
   font-family: 'Libre Baskerville', serif;
   
@@ -12,7 +12,7 @@ body{
 @media (max-width: 667px)  {
     body {
         background-image: url('./style/img/4.png');
-       /* background-repeat: no-repeat; */
+       background-position:bottom;
         font-family: 'Libre Baskerville', serif;
     }
 }
@@ -32,9 +32,31 @@ h1{
 .nav{
     font-family: 'Libre Baskerville', serif;
 }
-.home{
-    background-image: url('./style/img/3.png');
-}
 
- 
- 
+
+ .SI{
+    font-family: 'Libre Baskerville', serif;
+ }
+ .check{
+     font-family: 'Libre Baskerville', serif;
+     background-color:white
+ }
+ .return{
+     background-color: white;
+     font-family: 'Libre Baskerville', serif;
+ }
+ .tools{
+     font-family: 'Libre Baskerville', serif;
+     background-color: white;
+ }
+ .material{
+     background-color: white;
+     font-family: 'Libre Baskerville', serif;
+ }
+ .brands{
+     background-color: white;
+     font-family: 'Libre Baskerville', serif;
+ }
+ .signin{
+background-color: white;
+ }

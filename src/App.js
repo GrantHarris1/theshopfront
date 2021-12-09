@@ -21,6 +21,21 @@ function App() {
     const [tools, setTools] = useState([]);
     const [brands, setBrands] = useState([]);
     const [materials, setMaterials] = useState([]);
+    const [toolsInCart, setToolsInCart] = useState([]);
+    
+    const [cart, setCart] = useState([]);
+    const addToCart = (id) => {
+        setCart(prevCart => {
+            const found = tools.find(product => product.id === id)
+            tools[prevCart] = found[+1];
+
+
+            return [...prevCart, found]
+        })
+        console.log('added to cart : ', id)
+
+    }
+
     useEffect(() => {
         // run axios call
         // in then -> set tools
@@ -50,17 +65,27 @@ function App() {
         }).then(res => setMaterials(res.data))
     }, [])
 
+    const calculateCart = () =>{
+        // get cart from state , create var , map, oject total cart, total price
+       let cartTot = toolsInCart.reduce((accumulator, current) => accumulator + current.price, 0);
+       let num = cart.length;
+    
+        return [cartTot, num];
+
+    }
+
+    let cartobj = calculateCart();
     
 
     console.log(brands)
 
     return (
         <Router>
-            <Headline token={token} setToken={setToken} />
+            <Headline token={token} setToken={setToken} toolsInCart={toolsInCart} />
             <Routes>
                 <Route path="/" >
-                    <Route path="tools" element={<Tools tools={tools} />} />
-                    <Route path="checkout" element={<Checkout />} />
+                    <Route path="tools" element={<Tools tools={tools} toolsInCart={toolsInCart}  />} />
+                    <Route path="checkout" element={<Checkout cart={cart} setCart={setCart} cartobj={cartobj} />} />
                     <Route path="return" element={<Return />} />
                     <Route path="brands" element={<Brands brands ={brands} />} />
                     <Route path="materials" element={<Materials materials = {materials} />} />

@@ -12,12 +12,7 @@ export default function Conduit() {
                 <Col md="auto">
             <Card className=" conCard text-center shadow p-3 mb-5 bg-white rounded">
   <Card.Img variant="top" src='https://image.made-in-china.com/44f3j00pHGTmNIhHirS/Galvanized-Conduit-IMC-Thin-Wall-Steel-Pipe-Price.jpg' />
-  <Card.Body>
-    <Card.Title>Conduit Available:</Card.Title>
-    <Card.Text>
-      Here Is A List Of Our Current Conduit Sizes And Types Available.
-    </Card.Text>
-  </Card.Body>
+  
   <ListGroup className="list-group-flush">
     <ListGroupItem>1/2" Sch. 40 PVC  </ListGroupItem>
     <ListGroupItem>3/4" Sch.40 PVC</ListGroupItem>

@@ -6,16 +6,8 @@ export var cart = ['Dewalt'];
 export default function Checkout(props) {
 
     var token = props.getToken;
-    var checkouts = props.NumCheckouts
-
-    const addRemoveTool = e => {
-        // e change event
-
-        // look in local checkOutTools array 
-
-        // if not in, add the item
-        // if is in, remove the item
-    };
+    let toolsInCart = props.toolsInCart;
+    console.log(toolsInCart);
 
     const checkOutToolsHandler = e => {
         // prevent default submit
@@ -48,22 +40,26 @@ export default function Checkout(props) {
             <Container>
                 <Row>
                     <Col>
-                        <Table>
-                            <th>
-
+                        <Table responsive className=' bg-white border-secondary border-rounded'>
+                            <thead>
                                 <tr>
-                                    <td>
-                                        #
-                                </td>
-                                    <td>
-                                        tool
-                                </td>
+                                    <th>#</th>
+                                    <th>Tools</th>
+                                    <th>Brand</th>
+                                    <th># ordered</th>
+
                                 </tr>
-                            </th>
+                            </thead>
                             <tbody>
-                                {cart.map((item, index) => (<tr key={index}><td>{index}</td>
-                                <td>{item}</td>
-                                </tr>))}
+                                
+                                {toolsInCart.map((item, index) => (
+                                    <tr key={index}><td>{index}</td>
+                                        <td>{item}</td>
+                                        <td>{item}</td>
+                                        <td>{item.brand}</td>
+                                        <td>1</td>
+                                    </tr>
+                                ))}
 
                             </tbody>
                         </Table>
@@ -101,37 +97,7 @@ export default function Checkout(props) {
                         </Table>
 
 
-                        <Table responsive className=' bg-white border-secondary border-rounded'>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Materials</th>
-                                    <th>Size</th>
-                                    <th># Ordered</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>hex nuts</td>
-                                    <td>1/4 x 20</td>
-                                    <td>2000</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>lock washers</td>
-                                    <td>1/4 inch</td>
-                                    <td>2000</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>EMT</td>
-                                    <td>1 inch</td>
-                                    <td>400 feet</td>
-                                </tr>
-                            </tbody>
-                        </Table>
+                        
                     </Col>
                 </Row>
             </Container>

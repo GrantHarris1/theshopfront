@@ -14,6 +14,7 @@ import Materials from './pages/Materials';
 import SignIn from './pages/SignIn';
 import axios from 'axios';
 import Brands from './pages/Brands';
+import Conduit from './components/Conduit'
 
 
 function App() {
@@ -25,15 +26,17 @@ function App() {
     
     const [cart, setCart] = useState([]);
     const addToCart = (id) => {
-        setCart(prevCart => {
-            const found = tools.find(product => product.id === id)
-            tools[prevCart] = found[+1];
-
-
-            return [...prevCart, found]
+        const found = tools.find(tool => tool.id == id);
+        setToolsInCart(prevCart => {
+            let oldCart = prevCart;
+            if(found){
+                return [...prevCart, found]
+            } else {
+                return oldCart
+            }
+        
         })
         console.log('added to cart : ', id)
-
     }
 
     useEffect(() => {
@@ -67,14 +70,17 @@ function App() {
 
     const calculateCart = () =>{
         // get cart from state , create var , map, oject total cart, total price
-       let cartTot = toolsInCart.reduce((accumulator, current) => accumulator + current.price, 0);
        let num = cart.length;
     
-        return [cartTot, num];
+        return num;
 
     }
 
     let cartobj = calculateCart();
+     let toolCheckout = (tool_id) => {
+        // axios call
+        addToCart(parseInt(tool_id)); 
+    }
     
 
     console.log(brands)
@@ -84,10 +90,11 @@ function App() {
             <Headline token={token} setToken={setToken} toolsInCart={toolsInCart} />
             <Routes>
                 <Route path="/" >
-                    <Route path="tools" element={<Tools tools={tools} toolsInCart={toolsInCart}  />} />
-                    <Route path="checkout" element={<Checkout cart={cart} setCart={setCart} cartobj={cartobj} />} />
+                    <Route path="tools" element={<Tools tools={tools} toolsInCart={toolsInCart} toolCheckout={toolCheckout}  />} />
+                    <Route path="checkout" element={<Checkout toolsInCart={toolsInCart} getToken={token} />} />
                     <Route path="return" element={<Return />} />
                     <Route path="brands" element={<Brands brands ={brands} />} />
+                    <Route path="conduit" element={<Conduit />} />
                     <Route path="materials" element={<Materials materials = {materials} />} />
                     <Route path="signIn" element={<SignIn setToken={setToken} getToken={token} />} />
                     <Route index element={<Home />} />

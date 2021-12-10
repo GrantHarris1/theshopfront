@@ -77,7 +77,7 @@ export default function Return() {
         
         
             <Card className="text-center">
-  <Card.Header>Featured</Card.Header>
+  <Card.Header>Need Help? <a href="tel:8597857869">Click here to call the shop.</a></Card.Header>
   <Card.Body>
     <Card.Title>Special title treatment</Card.Title>
     <Card.Text>

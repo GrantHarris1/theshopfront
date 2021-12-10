@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Container, Col, Row, Table, Button, Card } from 'react-bootstrap';
 const NumLeft = Math.floor(Math.random() * 100);

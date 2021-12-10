@@ -5,6 +5,9 @@ const NumCheckouts = Math.floor(Math.random() * 100);
 
 
 export default function Tools(props) {
+    let toolCheckout = (e) => {
+        props.toolCheckout(e.target.id)
+    };
 
     const mappedTools = props.tools.map((tool, index) => {
         return (
@@ -14,7 +17,7 @@ export default function Tools(props) {
                 <td>{tool.name}</td>
                 <td>{tool.brand.name}</td>
                 <td>{NumCheckouts}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
-                <th> <Button variant="dark" className='rounded-pill' onClick={()=>console.log("asjdflasjdflaksjdf")} >Check this tool out</Button>{' '}</th>
+                <th> <Button id={tool.id} variant="dark" className='rounded-pill' onClick={toolCheckout} >Check this tool out</Button>{' '}</th>
             </tr>
             
         )
@@ -50,7 +53,7 @@ export default function Tools(props) {
             </Container>
         
         <Card className="text-center">
-        <Card.Header>Featured</Card.Header>
+        <Card.Header>Need Help? <a href="tel:8597857869">Click here to call the shop.</a></Card.Header>
         <Card.Body>
           <Card.Title>Special title treatment</Card.Title>
           <Card.Text>

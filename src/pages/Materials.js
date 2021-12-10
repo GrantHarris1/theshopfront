@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Container, Col, Row, Table, Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const NumLeft = Math.floor(Math.random() * 100);
 
 
@@ -48,21 +49,21 @@ export default function Materials(props) {
                                     {mappedMaterials}
                                 </tbody>
                             </Table>
+                            <Card.Body className="text-danger">
+    <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>
+    <Card.Link as={Link} to='/tools'><i class="bi bi-wrench text-danger"></i></Card.Link>
+    <Card.Link as={Link} to='/materials'><i class="bi bi-nut text-danger"></i></Card.Link>
+    <Card.Link as={Link} to='/checkout'><i class="bi bi-bag-plus text-danger"></i></Card.Link>
+    <Card.Link as={Link} to='/return'><i class="bi bi-arrow-return-left text-danger"></i></Card.Link>
+    <Card.Link href = "mailto: grant.harris.web@gmail.com"><i className="bi bi-envelope text-danger"></i></Card.Link>
+    <Card.Link href="tel:8597857869"><i class="bi bi-telephone text-danger"></i></Card.Link>
+    
+    </Card.Body>
                         </Card>
                     </Col>
                 </Row>
             </Container>
-            <Card className="text-center">
-                <Card.Header>Featured</Card.Header>
-                <Card.Body>
-                    <Card.Title>Special title treatment</Card.Title>
-                    <Card.Text>
-                        With supporting text below as a natural lead-in to additional content.
-    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-                <Card.Footer className="text-muted">2 days ago</Card.Footer>
-            </Card>
+           
         </div>
 
     )

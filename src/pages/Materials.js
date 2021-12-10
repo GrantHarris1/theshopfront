@@ -23,42 +23,46 @@ export default function Materials(props) {
     return (
         <div className='material'>
             <br />
-            <Container className='text-center'>
-                <Row>
-                    <Row >
-                        <Col>
-                            <Col sm={4} md={12}>
-                                <Table responsive bordered className=' bg-white border-secondary border-rounded' >
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Type</th>
-                                            <th>Size</th>
-                                            <th>Available</th>
-                                            <th>Checkout</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {mappedMaterials}
-                                    </tbody>
-                                </Table>
-                            </Col>
-                        </Col>
-                    </Row>
+            <Container fluid className="conduit tex-center">
+                <Row className="justify-content-md-center">
+                    <Col md="auto">
+                        <Card className=" conCard text-center shadow p-3 mb-5 bg-white rounded">
+                            <Card.Body>
+                                <Card.Title>Materials Available:</Card.Title>
+                                <Card.Text>
+                                    Here Is A List Of Our Current Materials Available.
+                                </Card.Text>
+                            </Card.Body>
+                            <Table responsive bordered className=' bg-white border-secondary border-rounded' >
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Size</th>
+                                        <th>Available</th>
+                                        <th>Checkout</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {mappedMaterials}
+                                </tbody>
+                            </Table>
+                        </Card>
+                    </Col>
                 </Row>
             </Container>
             <Card className="text-center">
-  <Card.Header>Featured</Card.Header>
-  <Card.Body>
-    <Card.Title>Special title treatment</Card.Title>
-    <Card.Text>
-      With supporting text below as a natural lead-in to additional content.
+                <Card.Header>Featured</Card.Header>
+                <Card.Body>
+                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Text>
+                        With supporting text below as a natural lead-in to additional content.
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-  <Card.Footer className="text-muted">2 days ago</Card.Footer>
-</Card>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+                <Card.Footer className="text-muted">2 days ago</Card.Footer>
+            </Card>
         </div>
 
     )

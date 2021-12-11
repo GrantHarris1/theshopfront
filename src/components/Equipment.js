@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem, Container, Row, Col } from 'react-bootstrap';
+import { Card, Table, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Equipment() {
@@ -16,21 +16,69 @@ export default function Equipment() {
                             Here Is A List Of The Earth Moving Equipment Available
                             </Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush">
-                        <ListGroupItem>Micro Trencher </ListGroupItem>
-                        <ListGroupItem>Ride on Trencher</ListGroupItem>
-                        <ListGroupItem>Walk Behind Trencher</ListGroupItem>
-                        <ListGroupItem>Mini or Compact Excavator</ListGroupItem>
-                        <ListGroupItem>Midi Excavator</ListGroupItem>
-                        <ListGroupItem>Standard Excavator</ListGroupItem>
-                        <ListGroupItem>Large Excavator</ListGroupItem>
-                        <ListGroupItem>Bobcat Compact Track Loaders</ListGroupItem>
-                        <ListGroupItem>Bobcat Small Articulated Loaders</ListGroupItem>
-                        <ListGroupItem>Bobcat Compact Wheel Loaders</ListGroupItem>
-
-
-
-                    </ListGroup>
+                    <Table responsive="sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Equip. Name</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Micro Trencher</td>
+       
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ride on Trencher</td>
+       
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Walk Behind Trencher</td>
+        
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Mini or Compact Excavator</td>
+        
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Midi Excavator</td>
+        
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Standard Excavator</td>
+        
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Large Excavator</td>
+        
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Bobcat Compact Track Loaders</td>
+        
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Bobcat Small Articulated Loaders</td>
+        
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Bobcat Compact Wheel Loaders</td>
+        
+      </tr>
+      
+    </tbody>
+  </Table>
+                    
                     <Card.Body className="text-danger">
                         <Card.Text>Follow the links below if you need help.</Card.Text>
                         <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

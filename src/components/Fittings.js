@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { Card, Table, Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function Fittings() {
     return (
@@ -14,44 +16,230 @@ export default function Fittings() {
                                 Here Is A List Of The Fitiings and Sizes Available
                                 </Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>1/2" Sch. 40 PVC  </ListGroupItem>
-                            <ListGroupItem>3/4" Sch.40 PVC</ListGroupItem>
-                            <ListGroupItem>1" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>1.25" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>1.50" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>2" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>2.5" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>3" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>3.5" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>4" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>1/2" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>3/4" Sch.80 PVC</ListGroupItem>
-                            <ListGroupItem>1" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>1.25" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>1.50" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>2" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>2.5" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>3" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>3.5" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>4" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>1/2" EMT</ListGroupItem>
-                            <ListGroupItem>3/4" EMT</ListGroupItem>
-                            <ListGroupItem>1" EMT</ListGroupItem>
-                            <ListGroupItem>1.25" EMT</ListGroupItem>
-                            <ListGroupItem>1.50" EMT</ListGroupItem>
-                            <ListGroupItem>2" EMT</ListGroupItem>
-                            <ListGroupItem>2.5" EMT</ListGroupItem>
-                            <ListGroupItem>3" EMT</ListGroupItem>
-                            <ListGroupItem>3.5" EMT</ListGroupItem>
-                            <ListGroupItem>4" EMT</ListGroupItem>
-                            <ListGroupItem>1/2" RMC</ListGroupItem>
-                            <ListGroupItem>3" RMC </ListGroupItem>
-                            <ListGroupItem>3.5" RMC </ListGroupItem>
-                            <ListGroupItem>4" RMC </ListGroupItem>
+                        <Table responsive="sm">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Size</th>
+                                    <th>Type</th>
+                                    <th>Material</th>
 
-
-                        </ListGroup>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1/2"</td>
+                                    <td>MA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3/4"</td>
+                                    <td>MA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1"</td>
+                                    <td>FA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2"</td>
+                                    <td>MA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>3"</td>
+                                    <td>MA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>4"</td>
+                                    <td>MA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>1/2"</td>
+                                    <td>FA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>3/4"</td>
+                                    <td>FA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>1"</td>
+                                    <td>MA</td>
+                                    <td>PVC</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>1/2"</td>
+                                    <td>LB</td>
+                                    <td>Cast</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>3/4"</td>
+                                    <td>LB</td>
+                                    <td>Cast</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>1"</td>
+                                    <td>LB</td>
+                                    <td>Cast</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>2"</td>
+                                    <td>LB</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>3"</td>
+                                    <td>LB</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>4"</td>
+                                    <td>LB</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>1/2"</td>
+                                    <td>LL</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>3/4"</td>
+                                    <td>LL</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>1"</td>
+                                    <td>LL</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>2"</td>
+                                    <td>LL</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td>
+                                    <td>3"</td>
+                                    <td>LL</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>21</td>
+                                    <td>4"</td>
+                                    <td>LL</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>1/2"</td>
+                                    <td>LR</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>23</td>
+                                    <td>3/4"</td>
+                                    <td>LR</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>1"</td>
+                                    <td>LR</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                    <td>2"</td>
+                                    <td>LR</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>3"</td>
+                                    <td>LR</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>27</td>
+                                    <td>4"</td>
+                                    <td>LR</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>28</td>
+                                    <td>1/2"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>3/4"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>30</td>
+                                    <td>1"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>31</td>
+                                    <td>1.25"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>32</td>
+                                    <td>1.50"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>33</td>
+                                    <td>2"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>3"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                                <tr>
+                                    <td>35</td>
+                                    <td>4"</td>
+                                    <td>Coupling</td>
+                                    <td>Rigid</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                        
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

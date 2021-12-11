@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem, Container, Row, Col } from 'react-bootstrap';
+import { Card, Table, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Safety() {
     return (
-        
-             <Container fluid className="conduit">
+
+        <Container fluid className="conduit">
             < br />
             <Row className="justify-content-md-center">
                 <Col md="auto">
@@ -17,27 +17,98 @@ export default function Safety() {
                                 Here Is A List Of The Safety Equipment Available
                                 </Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>ANSI Safety Glasses (clear)</ListGroupItem>
-                            <ListGroupItem>ANSI Safety Glasses (tinted)</ListGroupItem>
-                            <ListGroupItem>Hearing Protection</ListGroupItem>
-                            <ListGroupItem>Class E Hard Hats</ListGroupItem>
-                            <ListGroupItem>Level 4 Gloves (sm)</ListGroupItem>
-                            <ListGroupItem>Level 4 Gloves (md)</ListGroupItem>
-                            <ListGroupItem>Level 4 Gloves (lg)</ListGroupItem>
-                            <ListGroupItem>Level 4 Gloves (xl)</ListGroupItem>
-                            <ListGroupItem>High Viz Vest (sm)</ListGroupItem>
-                            <ListGroupItem>High Viz Vest (md)</ListGroupItem>
-                            <ListGroupItem>High Viz Vest (lg)</ListGroupItem>
-                            <ListGroupItem>High Viz Vest (xl)</ListGroupItem>
-                            <ListGroupItem>Hot Work Permit</ListGroupItem>
-                            <ListGroupItem>Street Cones</ListGroupItem>
-                            <ListGroupItem>Workers Ahead Sign</ListGroupItem>
-                            <ListGroupItem>Fire Extinguisher</ListGroupItem>
-                            
-
-
-                        </ListGroup>
+                        <Table responsive="sm">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ANSI Safety Glasses (clear)</td>
+                                    <td>One</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ANSI Safety Glasses (tinted)</td>
+                                    <td>One</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Hearing Protection</td>
+                                    <td>Many</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Class E Hard Hats</td>
+                                    <td>One</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Level 4 Gloves</td>
+                                    <td>SM</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Level 4 Gloves</td>
+                                    <td>MD</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Level 4 Gloves</td>
+                                    <td>LG</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Level 4 Gloves</td>
+                                    <td>XL</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>High Viz Vest</td>
+                                    <td>SM</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>High Viz Vest</td>
+                                    <td>MD</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>High Viz Vest</td>
+                                    <td>LG</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>High Viz Vest</td>
+                                    <td>XL</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Hot Work Permit</td>
+                                    <td>N/A</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>Street Cones</td>
+                                    <td>Standard</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Workers Ahead Sign</td>
+                                    <td>Standard</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>Fire Extinguisher (ABC)</td>
+                                    <td>Standard</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                        
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>
@@ -53,7 +124,7 @@ export default function Safety() {
                 </Col>
             </Row>
         </Container>
-            
-        
+
+
     )
 }

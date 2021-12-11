@@ -25,7 +25,7 @@ export default function Headline(props) {
   <Dropdown.Item as={Link} to='./safety' className='bg-dark text-light'>Safety Equipment</Dropdown.Item>
 </DropdownButton>
                         </Nav>
-                        <Nav className="ms-auto">s
+                        <Nav className="ms-auto">
                             {/* conditinally render the sign in button to be sign out using the token */}
                             {
                                props.token.length > 0

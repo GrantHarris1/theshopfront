@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, ListGroup, ListGroupItem, Container, Row, Col } from 'react-bootstrap';
+import { Card, Table, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 export default function Lifts() {
@@ -16,20 +16,68 @@ export default function Lifts() {
                                 Here Is A List Of The Lifts and Sizes Available
                                 </Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>19' Scissor Lift  </ListGroupItem>
-                            <ListGroupItem>26' Scissor Lift </ListGroupItem>
-                            <ListGroupItem>32' Scissor Lift </ListGroupItem>
-                            <ListGroupItem>45' Scissor Lift </ListGroupItem>
-                            <ListGroupItem>50' Scissor Lift </ListGroupItem>
-                            <ListGroupItem>S-40 Boom Lift</ListGroupItem>
-                            <ListGroupItem>S-60 Boom Lift</ListGroupItem>
-                            <ListGroupItem>S-80 Boom Lift</ListGroupItem>
-                            <ListGroupItem>SX-105 XC Boom Lift</ListGroupItem>
-
-
-
-                        </ListGroup>
+                        <Table responsive="sm">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Size</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>19'</td>
+                                    <td>Scissor</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>26'</td>
+                                    <td>Scissor</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>32'</td>
+                                    <td>Scissor</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>45'</td>
+                                    <td>Scissor</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>50'</td>
+                                    <td>Scissor</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>S-40</td>
+                                    <td>Boom</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>S-60</td>
+                                    <td>Boom</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>S-80</td>
+                                    <td>Boom</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>SX-105 XC</td>
+                                    <td>Boom</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>19'</td>
+                                    <td>One Man</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                        
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

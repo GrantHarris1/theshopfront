@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, ListGroup, ListGroupItem, Container, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 
@@ -18,44 +18,141 @@ export default function Conduit() {
                                 Here Is A List Of The Conduit sizes and Types Available
                                 </Card.Text>
                         </Card.Body>
-                        <ListGroup className="list-group-flush">
-                            <ListGroupItem>1/2" Sch. 40 PVC  </ListGroupItem>
-                            <ListGroupItem>3/4" Sch.40 PVC</ListGroupItem>
-                            <ListGroupItem>1" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>1.25" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>1.50" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>2" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>2.5" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>3" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>3.5" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>4" Sch. 40 PVC</ListGroupItem>
-                            <ListGroupItem>1/2" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>3/4" Sch.80 PVC</ListGroupItem>
-                            <ListGroupItem>1" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>1.25" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>1.50" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>2" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>2.5" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>3" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>3.5" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>4" Sch. 80 PVC</ListGroupItem>
-                            <ListGroupItem>1/2" EMT</ListGroupItem>
-                            <ListGroupItem>3/4" EMT</ListGroupItem>
-                            <ListGroupItem>1" EMT</ListGroupItem>
-                            <ListGroupItem>1.25" EMT</ListGroupItem>
-                            <ListGroupItem>1.50" EMT</ListGroupItem>
-                            <ListGroupItem>2" EMT</ListGroupItem>
-                            <ListGroupItem>2.5" EMT</ListGroupItem>
-                            <ListGroupItem>3" EMT</ListGroupItem>
-                            <ListGroupItem>3.5" EMT</ListGroupItem>
-                            <ListGroupItem>4" EMT</ListGroupItem>
-                            <ListGroupItem>1/2" RMC</ListGroupItem>
-                            <ListGroupItem>3" RMC </ListGroupItem>
-                            <ListGroupItem>3.5" RMC </ListGroupItem>
-                            <ListGroupItem>4" RMC </ListGroupItem>
-
-
-                        </ListGroup>
+                        <Table responsive="sm">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Size</th>
+                                    <th>Type</th>
+                                    <th>Sch.</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1/2"</td>
+                                    <td>PVC</td>
+                                    <td>40</td>
+                                    </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>3/4"</td>
+                                    <td>PVC</td>
+                                    <td>40</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1"</td>
+                                    <td>PVC</td>
+                                    <td>40</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>1/2"</td>
+                                    <td>PVC</td>
+                                    <td>80</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>3/4"</td>
+                                    <td>PVC</td>
+                                    <td>80</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>1"</td>
+                                    <td>PVC</td>
+                                    <td>80</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>1/2"</td>
+                                    <td>EMT</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>3/4"</td>
+                                    <td>EMT</td>
+                                    
+                                    
+                                </tr>
+                               
+                                <tr>
+                                    <td>9</td>
+                                    <td>1"</td>
+                                    <td>EMT</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2"</td>
+                                    <td>EMT</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>4"</td>
+                                    <td>EMT</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>4"</td>
+                                    <td>EMT</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>1/2"</td>
+                                    <td>RMC</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>3/4"</td>
+                                    <td>RMC</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>1"</td>
+                                    <td>RMC</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>2"</td>
+                                    <td>RMC</td>
+                                    
+                                    
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>4"</td>
+                                    <td>RMC</td>
+                                    
+                                    
+                                </tr>
+                             
+                                
+                            </tbody>
+                        </Table>
+                       
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

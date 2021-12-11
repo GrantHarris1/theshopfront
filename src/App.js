@@ -18,6 +18,7 @@ import Conduit from './components/Conduit';
 import Lifts from './components/Lifts';
 import Safety from './components/Safety';
 import Equipment from './components/Equipment';
+import Fittings from './components/Fittings';
 
 
 function App() {
@@ -101,6 +102,7 @@ function App() {
                     <Route path="lifts" element={<Lifts />} />
                     <Route path="safety" element={<Safety />} />
                     <Route path="equipment" element={<Equipment />} />
+                    <Route path="fittings" element={<Fittings />} />
                     <Route path="materials" element={<Materials materials = {materials} />} />
                     <Route path="signIn" element={<SignIn setToken={setToken} getToken={token} />} />
                     <Route index element={<Home />} />

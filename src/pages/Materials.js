@@ -15,7 +15,7 @@ export default function Materials(props) {
                 <td>{material.type}</td>
                 <td>{material.size.name}</td>
                 <td>{NumLeft}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
-                <th> <Button variant="dark" className='rounded-pill'>Add to Checkout</Button>{' '}</th>
+                <th> <Button variant="secondary" className='bi bi-bag-plus'></Button>{' '}</th>
             </tr>
 
         )

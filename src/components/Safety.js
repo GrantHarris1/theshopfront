@@ -108,7 +108,7 @@ export default function Safety() {
                                 </tr>
                             </tbody>
                         </Table>
-                        
+
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

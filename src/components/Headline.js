@@ -19,12 +19,10 @@ export default function Headline(props) {
                             <Nav.Link as={Link} to='/return' className='text-light'><i class="bi bi-arrow-return-left"> </i>Ready for Return</Nav.Link>
                             <DropdownButton variant ='dark' id="dropdown-basic-button" title="Quick Search" className='text-light' >
   <Dropdown.Item as={Link} to='/conduit' className='bg-dark text-light'>Conduit</Dropdown.Item>
-  <Dropdown.Item as={Link} to='/tools' className='bg-dark text-light'>Tools</Dropdown.Item>
-  <Dropdown.Item href="#/action-3" className='bg-dark text-light'>Equipment</Dropdown.Item>
+  <Dropdown.Item as={Link} to='./equipment' className='bg-dark text-light'>Earth Moving</Dropdown.Item>
   <Dropdown.Item href="#/action-3" className='bg-dark text-light'>Fittings</Dropdown.Item>
-  <Dropdown.Item href="#/action-3" className='bg-dark text-light'>Hardware</Dropdown.Item>
-  <Dropdown.Item href="#/action-3" className='bg-dark text-light'>Lifts</Dropdown.Item>
-  <Dropdown.Item href="#/action-3" className='bg-dark text-light'>Safety Equipment</Dropdown.Item>
+  <Dropdown.Item as={Link} to='./lifts' className='bg-dark text-light'>Lifts</Dropdown.Item>
+  <Dropdown.Item as={Link} to='./safety' className='bg-dark text-light'>Safety Equipment</Dropdown.Item>
 </DropdownButton>
                         </Nav>
                         <Nav className="ms-auto">

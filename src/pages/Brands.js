@@ -14,7 +14,7 @@ export default function Brands(props) {
                 <td>{brand.name}</td>
                 <td>{NumTools}</td>
                 <td>{NumChecks}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
-                <th> <Button variant="dark" className='rounded-pill'>Go to Brand</Button>{' '}</th>
+                <th> <Button variant= 'secondary' className='rounded-pill'>Go to Brand</Button>{' '}</th>
             </tr>
         )
     })

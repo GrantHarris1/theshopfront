@@ -14,7 +14,10 @@ import Materials from './pages/Materials';
 import SignIn from './pages/SignIn';
 import axios from 'axios';
 import Brands from './pages/Brands';
-import Conduit from './components/Conduit'
+import Conduit from './components/Conduit';
+import Lifts from './components/Lifts';
+import Safety from './components/Safety';
+import Equipment from './components/Equipment';
 
 
 function App() {
@@ -95,6 +98,9 @@ function App() {
                     <Route path="return" element={<Return />} />
                     <Route path="brands" element={<Brands brands ={brands} />} />
                     <Route path="conduit" element={<Conduit />} />
+                    <Route path="lifts" element={<Lifts />} />
+                    <Route path="safety" element={<Safety />} />
+                    <Route path="equipment" element={<Equipment />} />
                     <Route path="materials" element={<Materials materials = {materials} />} />
                     <Route path="signIn" element={<SignIn setToken={setToken} getToken={token} />} />
                     <Route index element={<Home />} />

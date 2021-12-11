@@ -17,7 +17,7 @@ export default function Tools(props) {
                 <td>{tool.name}</td>
                 <td>{tool.brand.name}</td>
                 <td>{NumCheckouts}</td> {/* TODO: add number of checkouts, or whatever kind of data you want to show  */}
-                <th> <Button id={tool.id} variant="dark" className='rounded-pill' onClick={toolCheckout} >Check this tool out</Button>{' '}</th>
+                <th> <Button id={tool.id} variant='secondary' className='bi bi-bag-plus ' onClick={toolCheckout} ></Button>{' '}</th>
             </tr>
 
         )
@@ -43,7 +43,7 @@ export default function Tools(props) {
                                         <th>Type</th>
                                         <th>Brand</th>
                                         <th>Checkouts</th>
-                                        <th>Checkout</th>
+                                        <th>Add to Cart</th>
 
                                     </tr>
                                 </thead>

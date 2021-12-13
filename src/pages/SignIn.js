@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Card, Button, Col, Row, Container, InputGroup, FormControl } from 'react-bootstrap';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignIn(props) {
-    const [inputs, setInputs] = useState({}); 
+    const [inputs, setInputs] = useState({});
     var token = props.getToken;
     const handleChange = e => {
         setInputs(prevState => {
@@ -14,7 +14,7 @@ export default function SignIn(props) {
             }
         })
     }
-   const saveToLocalStorage = (newToken) => {
+    const saveToLocalStorage = (newToken) => {
         localStorage.setItem('token', newToken);
     }
     const navigate = useNavigate()
@@ -49,7 +49,7 @@ export default function SignIn(props) {
     }
     const handleLogOut = e => {
         const data = {
-            
+
         }
         const headers = {
             Accept: 'application/json',
@@ -102,9 +102,9 @@ export default function SignIn(props) {
                                         type='password'
                                     />
                                 </InputGroup>
-                                
-                                
-                                
+
+
+
                                 <Button variant="secondary"
                                     onClick={handleLogIn}
                                 >Click Here To Sign In</Button>
@@ -113,7 +113,7 @@ export default function SignIn(props) {
                                 <Button variant="secondary"
                                     onClick={handleLogOut}
                                 >Click Here To Sign Out</Button>
-                                
+
                             </Card.Body>
                             <Card.Footer className="text-muted">Thank you.</Card.Footer>
                         </Card>
@@ -134,16 +134,16 @@ export default function SignIn(props) {
             <br />
             <br />
             <Card className="text-center">
-  <Card.Header>Need Help? <a href="tel:8597857869">Click here to call the shop.</a></Card.Header>
-  <Card.Body>
-    <Card.Title>Special title treatment</Card.Title>
-    <Card.Text>
-      With supporting text below as a natural lead-in to additional content.
+                <Card.Header>Need Help? <a href="tel:8597857869">Click here to call the shop.</a></Card.Header>
+                <Card.Body>
+                    <Card.Title>Special title treatment</Card.Title>
+                    <Card.Text>
+                        With supporting text below as a natural lead-in to additional content.
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-  <Card.Footer className="text-muted">2 days ago</Card.Footer>
-</Card>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+                <Card.Footer className="text-muted">2 days ago</Card.Footer>
+            </Card>
 
 
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Container, Row, Col, Table } from 'react-bootstrap';
+import { Card, Container, Row, Col, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 
@@ -25,7 +25,7 @@ export default function Conduit() {
                                     <th>Size</th>
                                     <th>Type</th>
                                     <th>Sch.</th>
-                                    
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,125 +34,127 @@ export default function Conduit() {
                                     <td>1/2"</td>
                                     <td>PVC</td>
                                     <td>40</td>
-                                    </tr>
+                                </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>3/4"</td>
                                     <td>PVC</td>
                                     <td>40</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>1"</td>
                                     <td>PVC</td>
                                     <td>40</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>1/2"</td>
                                     <td>PVC</td>
                                     <td>80</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>3/4"</td>
                                     <td>PVC</td>
                                     <td>80</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>1"</td>
                                     <td>PVC</td>
                                     <td>80</td>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>1/2"</td>
                                     <td>EMT</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>8</td>
                                     <td>3/4"</td>
                                     <td>EMT</td>
-                                    
-                                    
+
+
                                 </tr>
-                               
+
                                 <tr>
                                     <td>9</td>
                                     <td>1"</td>
                                     <td>EMT</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>10</td>
                                     <td>2"</td>
                                     <td>EMT</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>11</td>
                                     <td>4"</td>
                                     <td>EMT</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>12</td>
                                     <td>4"</td>
                                     <td>EMT</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>13</td>
                                     <td>1/2"</td>
                                     <td>RMC</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>14</td>
                                     <td>3/4"</td>
                                     <td>RMC</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>15</td>
                                     <td>1"</td>
                                     <td>RMC</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>16</td>
                                     <td>2"</td>
                                     <td>RMC</td>
-                                    
-                                    
+
+
                                 </tr>
                                 <tr>
                                     <td>17</td>
                                     <td>4"</td>
                                     <td>RMC</td>
-                                    
-                                    
+
+
                                 </tr>
-                             
-                                
+
+
                             </tbody>
                         </Table>
-                       
+                        <Button id="top-btn" variant="secondary" type="submit" data-tf-popup="u1sHmRet">
+                            Quick Checkout Form
+                            </Button>
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

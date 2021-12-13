@@ -36,8 +36,14 @@ export default function Checkout(props) {
     }
 
     return (
-        <div className='check'>
+        <div className='check text-center'>
             <br />
+            <Button id="top-btn" variant="secondary" type="submit" data-tf-popup="u1sHmRet">
+                                Quick Checkout Form
+                            </Button>
+                            <br />
+                            <br />
+            {/* <button data-tf-popup="u1sHmRet">Checkout</button> */}
             <Container fluid className="conduit">
                 <Row className="justify-content-md-center">
                     <Col lg-9>

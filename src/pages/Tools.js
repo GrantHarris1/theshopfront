@@ -51,6 +51,9 @@ export default function Tools(props) {
                                     {mappedTools}
                                 </tbody>
                             </Table>
+                            <Button id="top-btn" variant="secondary" type="submit" data-tf-popup="u1sHmRet">
+                                Quick Checkout Form
+                            </Button>
                             <Card.Body className="text-danger">
   <Card.Text>Follow the links below if you need help.</Card.Text>
     <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>

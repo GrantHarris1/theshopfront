@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Table, Container, Row, Col } from 'react-bootstrap';
+import { Card, Table, Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 export default function Lifts() {
@@ -77,7 +77,9 @@ export default function Lifts() {
                                 </tr>
                             </tbody>
                         </Table>
-                        
+                        <Button id="top-btn" variant="secondary" type="submit" data-tf-popup="u1sHmRet">
+                            Quick Checkout Form
+                            </Button>
                         <Card.Body className="text-danger">
                             <Card.Text>Follow the links below if you need help.</Card.Text>
                             <Card.Link as={Link} to='/home'><i class="bi bi-lightning-charge text-danger"></i></Card.Link>
